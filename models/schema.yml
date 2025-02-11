@@ -13,6 +13,14 @@ sources:
             description: foreign key to ship
           - name: products_id
             description: foreign key to product
+            freshness:
+              warn_after:
+                count: 6
+                period: hour
+              error_after:
+                count: 90
+                period: day
+                loaded_at_field: date_date
           - name: revenue
             description: the amont paid by customer to pourchase the product, revenue = quantiy * selling_price
           - name: quantity
