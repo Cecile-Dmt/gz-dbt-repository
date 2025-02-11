@@ -11,7 +11,7 @@ sources:
             description: date of purchase
           - name: orders_id
             description: foreign key to ship
-          - name: products_id
+          - name: pdt_id
             description: foreign key to product
             freshness:
               warn_after:
@@ -31,11 +31,11 @@ sources:
         columns:
           - name: products_id
             description: foreign key to product
-            tests:
-              - unique
-              - not_null
-          - name: purchse_price
-            description: selling price of products
+        tests:
+           - unique
+           - not_null
+           - name: purchse_price 
+              description: selling price of products
       - name: ship
         identifier: raw_gz_ship
         description: ship of Greenweez
