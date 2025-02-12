@@ -1,9 +1,9 @@
 -- calcuate margin 
-{% macro margin(revenue, purchase_cost) %}
-     ROUND(revenue - purchase_cost)
- {% endmacro %}
+{% macro margin(revenue, purchase_cost) %} 
+    round(revenue - purchase_cost) 
+{% endmacro %}
 
 -- calcuate margin percent
 {% macro margin_percent(margin, revenue) %}
-    ROUND(SAFE_DIVIDE({margin}, {revenue}),2)
- {% endmacro %}
+    round(safe_divide({margin}, {revenue}), 2)
+{% endmacro %}
