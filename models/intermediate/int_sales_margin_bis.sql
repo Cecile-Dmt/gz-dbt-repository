@@ -3,9 +3,9 @@ WITH sub AS (
 SELECT
     *,
     quantity*purchase_price AS purchase_cost,
-from {{ ref('stg_raw__sales') }}
-LEFT JOIN {{ ref('stg_raw__product') }}
-    USING (product_id)
+from {{ ref('stg_raw__sales') }} AS sales
+LEFT JOIN {{ ref('stg_raw__product') }} AS product
+    USING (sales.products_id , product.products_id)
 )
 SELECT
     *,
