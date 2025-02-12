@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('raw', 'criteo') }}
+    select * from {{ source('raw', 'facebook') }}
 
 ),
 
@@ -16,7 +16,6 @@ renamed as (
         CAST(ads_cost AS FLOAT64) AS ads_cost,
         impression,
         click
-
     from source
 
 )

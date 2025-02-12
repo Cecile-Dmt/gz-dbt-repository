@@ -16,7 +16,6 @@ renamed as (
         CAST(ads_cost AS FLOAT64) AS ads_cost,
         impression,
         click
-
     from source
 
 )
