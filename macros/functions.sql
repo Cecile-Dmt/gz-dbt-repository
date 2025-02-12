@@ -5,5 +5,5 @@
 
 -- calcuate margin percent
 {% macro margin_percent(margin, revenue) %}
-    round(safe_divide({margin}, {revenue}), 2)
+    round(SAFE_DIVIDE({margin}, {revenue}), 2)
 {% endmacro %}
